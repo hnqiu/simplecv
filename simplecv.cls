@@ -67,7 +67,7 @@
   \medskip
   {\Large\scshape\raggedright{\color{emphcolor}{#1}}\par}\medskip
   \vspace{-\baselineskip}
-  {\color{lightblue}\noindent\rule\linewidth{2pt} \par}
+  {\color{lightblue}\noindent\rule\linewidth{1pt} \par}
   \smallskip
 }
 
@@ -87,7 +87,16 @@
 % use \parbox to break lines inside boxes
 \newcommand{\cvitem}[1]{
   \noindent\hspace{0.2\linewidth}
-  \makebox[1em][l]{\faAngleDoubleRight}
+  \makebox[1em][c]{\faAngleDoubleRight}
+  \parbox[t]{0.75\linewidth}{#1}\par
+  \smallskip
+}
+
+
+% new cmd \cvsubitem
+\newcommand{\cvsubitem}[1]{
+  \noindent\hspace{0.2\linewidth}\hspace{3mm}
+  \makebox[1em][c]{\faAngleDoubleRight}
   \parbox[t]{0.75\linewidth}{#1}\par
   \smallskip
 }
